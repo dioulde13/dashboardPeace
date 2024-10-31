@@ -1,0 +1,36 @@
+/* Styles personnalisés pour le graphique */
+canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .date-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .date-container label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  
+  .date-container input[type="date"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .date-container input[type="date"]:focus {
+    border-color: #5d9cec;
+    box-shadow: 0 0 5px rgba(93, 156, 236, 0.5);
+  }
+  

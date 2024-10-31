@@ -1,0 +1,16 @@
+<div class="container p-3">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let card of cards">
+      <div class="payement--card">
+        <div class="card--header">
+          <div class="amount">
+            <span class="title">{{ card.title }}</span>
+            <span class="amount--value">{{ card.amount }}</span>
+          </div>
+          <mat-icon class="icon">{{ card.icon }}</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-chart></app-chart>
+</div>

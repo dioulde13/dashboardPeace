@@ -1,0 +1,41 @@
+/* agent-transactions.component.css */
+.transactions-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: rgba(0, 0, 0, 0.125);
+    /* background-color: #f2f2f2; */
+    color: #333;
+  }
+  
+  td {
+    color: #555;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  

@@ -1,0 +1,149 @@
+
+.green-button {
+    color: white;
+    background-color: green;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .navbar {
+    width: 100%;
+      background-color: rgb(103, 20, 220);
+      padding: 15px;
+      font-family: Calibri, sans-serif;
+    }
+    .tableau{
+      margin: 30px;
+    }
+    
+    .navdiv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 35px;
+      font-weight: 600;
+      color: white;
+    }
+    
+    .nav-links {
+      list-style-type: none;
+    }
+    
+    .nav-links li {
+      display: inline-block;
+      margin-right: 25px;
+    }
+   
+    
+    .nav-links li a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    button {
+      /* background-color: black; */
+      margin-left: 10px;
+      border-radius: 10px;
+      width: 90px;
+      height: 30px;
+      border: none;
+    }
+    
+    button a {
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+    }
+    
+    .burger {
+      display: none;
+      cursor: pointer;
+    }
+    
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+    }
+    
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: crimson;
+        width: 100%;
+        text-align: center;
+      }
+    
+      .nav-links li {
+        display: block;
+        margin: 15px 0;
+      }
+    
+      .burger {
+        display: block;
+      }
+    
+      .burger.active + .nav-links {
+        display: flex;
+      }
+    }
+  
+  .ajouter{
+      margin-bottom: 10px;
+      color: #ddd;
+  }  
+  .ajouterButton{
+      background-color: #ddd;
+  }
+    /* Style du tableau */
+    .table-container {
+      padding: 20px;
+      width: 100%;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    button{
+      margin-bottom: 10px;
+    }
+    
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: center;
+      color: black;
+    }
+    
+    th {
+      background-color:#f2f2f2;
+      color:black;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    tr:hover {
+      background-color: #ddd;
+    }
+    

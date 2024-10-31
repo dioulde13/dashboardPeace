@@ -1,0 +1,122 @@
+<div class="container mb-4">
+    <!-- Header Actions -->
+<div class="d-flex justify-content-between align-items-center p-3">
+  <button mat-raised-button class="demo-button" routerLink="ajout">
+    Ajouter
+  </button>
+  <!-- Date Debut et Date Fin -->
+  <div class="d-flex align-items-center">
+    <div class="date-range-container">
+      <div class="date-input">
+        <input
+          type="date"
+          id="startDate"
+          [(ngModel)]="startDate"
+          (change)="onDateChange()"
+        />
+      </div>
+    
+      <div class="date-input">
+        <input
+          type="date"
+          id="endDate"
+          [(ngModel)]="endDate"
+          (change)="onDateChange()"
+        />
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Bouton Exporter et Champ de Recherche -->
+  <div class="d-flex align-items-center">
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Rechercher..."
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()"
+      />
+      <span class="search-icon">
+        <i class="fa fa-search"></i>
+      </span>
+    </div>
+    
+    <button mat-raised-button color="accent" (click)="exportExcel()">Exporter</button>
+  </div>
+</div>
+  
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="small-column"> ID </th>
+        <td mat-cell *matCellDef="let element" class="small-column"> {{element.id}} </td>
+      </ng-container>
+    
+      <!-- Nom Column -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef class="small-column"> Nom </th>
+        <td mat-cell *matCellDef="let element" class="small-column"> {{element.nom}} </td>
+      </ng-container>
+    
+      <!-- Prénom Column -->
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef class="small-column"> Prénom </th>
+        <td mat-cell *matCellDef="let element" class="small-column"> {{element.prenom}} </td>
+      </ng-container>
+
+       <!-- Telephone Column -->
+       <ng-container matColumnDef="telephone">
+        <th mat-header-cell *matHeaderCellDef class="small-column"> Téléphone</th>
+        <td mat-cell *matCellDef="let element" class="small-column"> {{element.telephone}} </td>
+      </ng-container>
+    
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef class="small-column" style="width: 20%;"> Action </th>
+        <td mat-cell *matCellDef="let element" class="small-column" 
+        style="display: flex;
+        padding: 10px;
+         justify-content: space-between; gap: 10px;">
+          <!-- Détail Button with Icon -->
+          <div class="example-button-row">
+            <a mat-flat-button 
+               style="background-color: #1E88E5; color: white;"
+               target="_blank"
+               (click)="navigateToInfo()"
+               >
+               <mat-icon style="font-size: 20px;">info</mat-icon>
+              </a>
+          </div>
+        
+          <!-- Bloquer Button with Icon and Red Color -->
+          <div class="example-button-row">
+            <a mat-flat-button 
+               style="background-color: #D32F2F; color: white;"
+               target="_blank"
+               (click)="openDialog()"
+               >
+               <mat-icon style="font-size: 20px;">lock</mat-icon>
+            </a>
+          </div>
+        
+          <!-- Transaction Button with Icon and Custom Color -->
+          <div class="example-button-row">
+            <a mat-flat-button 
+               style="background-color: #43A047; color: white;"
+               target="_blank"
+               (click)="navigateToTransaction()"
+               >
+               <mat-icon style="font-size: 20px;">swap_horiz</mat-icon>
+            </a>
+          </div>
+        </td>
+        
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>          
+    <!-- Paginator -->
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>

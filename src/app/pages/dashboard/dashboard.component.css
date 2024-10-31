@@ -1,0 +1,46 @@
+.payement--card{
+  background-color:white;
+  border-radius: 10px;
+  padding: 1.2rem;
+  /* width: 290px;
+  height: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+.payement--card:hover{
+  transform: translateY(-5px);
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 20px;
+    font-weight: 200px;
+    margin-bottom: 20px;
+}
+.amount--value{
+ font-size: 24px;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: 600;
+}
+.icon{
+    color: black;
+    padding: 0.5rem;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: wheat;
+}
+

@@ -1,0 +1,45 @@
+<div class="container p-3 d-flex justify-content-center align-items-center">
+    <mat-card appearance="outlined" style="width: 90%;">
+      <mat-card-header>
+        <mat-card-title>Ajouter un Agent</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="agentForm" (ngSubmit)="onSubmit()">
+
+          <div class="example-container" style="display: flex; gap: 16px;">
+            <mat-form-field class="full-width" style="flex: 1;">
+              <mat-label>Entrer le nom</mat-label>
+              <input matInput #input placeholder="Nom" />
+            </mat-form-field>
+          
+            <mat-form-field class="full-width" style="flex: 1;">
+              <mat-label>Entrer le Prénom</mat-label>
+              <input matInput #input placeholder="Prénom" />
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Téléphone</mat-label>
+            <input matInput formControlName="telephone" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" required>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+  
+      <mat-card-actions align="end">
+        <button
+          mat-button
+          type="submit"
+          [ngStyle]="{ 'color': 'white', 'background-color': 'green' }"
+          [disabled]="!agentForm.valid"
+        >
+          Ajouter
+        </button>
+      </mat-card-actions>
+      
+    </mat-card>
+  </div>

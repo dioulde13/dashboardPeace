@@ -1,0 +1,49 @@
+<!-- user-profile.component.html -->
+<div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
+    <div class="card">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/731/093/small_2x/login-icon-vector.jpg" alt="Logo" class="logo-img">
+        <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+      <!-- Nom -->
+      <div class="form-group">
+        <label for="name">Encien mot de passe</label>
+        <input
+          type="password"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Nouveau mot de passe</label>
+        <input
+          type="password"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Mot de Passe -->
+      <div class="form-group">
+        <label for="password">Répétez le mot de passe</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn-submit">Modifier</button>
+    </form>
+    </div>
+  </div>
+  

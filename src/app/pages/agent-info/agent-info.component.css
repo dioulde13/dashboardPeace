@@ -1,0 +1,28 @@
+/* agent-info.component.css */
+.full-height {
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+  }
+.agent-info-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .agent-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .agent-info strong {
+    color: #333;
+  }
+  

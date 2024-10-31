@@ -1,0 +1,23 @@
+<!-- agent-transactions.component.html -->
+<div class="transactions-container">
+    <h2>Liste des Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Montant (GNF)</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.montant +"  GNF" }}</td>
+          <td>{{ transaction.type }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

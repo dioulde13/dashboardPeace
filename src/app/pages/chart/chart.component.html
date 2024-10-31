@@ -1,0 +1,5 @@
+<div class="date-container">
+  <input type="date" id="startDate" [(ngModel)]="startDate" (change)="updateChart()" />
+  <input type="date" id="endDate" [(ngModel)]="endDate" (change)="updateChart()" />
+</div>
+<canvas #myChart width="400" height="80"></canvas>

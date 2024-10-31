@@ -1,0 +1,113 @@
+ /* Conteneur principal */
+ .search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+    /* margin: 20px auto; */
+  }
+  
+  /* Champ de recherche */
+  .search-container input[type="text"] {
+    width: 100%;
+    padding: 12px 40px 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Focus sur le champ */
+  .search-container input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Icône de recherche */
+  .search-container .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  
+  .search-container input[type="text"]:focus + .search-icon {
+    color: #007bff;
+  }
+
+  .demo-select {
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-select label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .demo-select select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+  }
+  .search-container {
+    position: relative;
+  }
+  .search-container input {
+    padding-right: 30px;
+  }
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    margin-right: 5px;
+  }
+  
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  .custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #4CAF50;
+  }
+  
+  .custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+  }
+  

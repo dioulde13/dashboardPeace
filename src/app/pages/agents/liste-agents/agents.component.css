@@ -1,0 +1,114 @@
+.custom-search-field .mat-form-field-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .custom-search-field .mat-form-field-flex {
+    height: 32px; /* Ajustez la hauteur selon vos préférences */
+    align-items: center; /* Centre le contenu verticalement */
+  }
+  
+  .custom-search-field .mat-input-element {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  /* Conteneur principal */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 10px;
+  /* margin: 20px auto; */
+}
+
+/* Champ de recherche */
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus sur le champ */
+.search-container input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Icône de recherche */
+.search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.search-container input[type="text"]:focus + .search-icon {
+  color: #007bff;
+}
+
+/* Conteneur principal */
+.date-range-container {
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+/* Conteneur pour chaque champ de date */
+.date-input {
+  position: relative;
+  width: 100%;
+}
+
+.date-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Style du champ de date */
+.date-input input[type="date"] {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus sur le champ de date */
+.date-input input[type="date"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Icône de calendrier */
+.date-input .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.date-input input[type="date"]:focus + .icon {
+  color: #007bff;
+}
+
+
+  

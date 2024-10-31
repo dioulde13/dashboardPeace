@@ -1,0 +1,80 @@
+<mat-toolbar>
+  <mat-toolbar-row
+    style="justify-content: space-between; background-color: aliceblue"
+  >
+    <div class="d-flex">
+      <a mat-list-item routerLink="dashboard">
+        <img
+          src="assets/dash.jpg"
+          alt="Dashboard"
+          style="height: 50px; width: 110px"
+        />
+      </a>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="pageProfil()">Profil</button>
+      <button mat-menu-item (click)="onSubmit()">Deconnexion</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side" style="width: 180px">
+    <mat-nav-list>
+      <!-- Lien direct vers la route des Transactions -->
+      <a mat-list-item routerLink="transactions">
+        <div class="d-flex">
+          <div style="margin-right: 5px;">
+            <mat-icon mat-list-icon>paid</mat-icon>
+          </div>
+          <div>Transactions</div>
+        </div>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="agents">
+        <div class="d-flex">
+          <div style="margin-right: 5px;">
+            <mat-icon mat-list-icon>people</mat-icon>
+          </div>
+          <div>Agents</div>
+        </div>
+      </a>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="listeUtilisateur">
+        <div class="d-flex">
+          <div style="margin-right: 5px;">
+            <mat-icon mat-list-icon>people</mat-icon>
+          </div>
+          <div>Utilisateurs</div>
+        </div>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="paramettre">
+        <div class="d-flex">
+          <div style="margin-right: 5px;">
+            <mat-icon mat-list-icon>settings</mat-icon>
+          </div>
+          <div>Paramètre</div>
+        </div>
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-container>
+    <div style="height: 90vh; background-color: #e0e0e0">
+      <router-outlet> </router-outlet>
+    </div>
+  </mat-sidenav-container>
+</mat-sidenav-container>
